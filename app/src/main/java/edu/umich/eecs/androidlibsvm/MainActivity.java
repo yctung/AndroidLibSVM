@@ -39,13 +39,18 @@ public class MainActivity extends Activity {
         CreateAppFolderIfNeed();
         copyAssetsDataIfNeed();
 
-        // 2. make SVM train
-        jniSvmTrain(appFolderPath+"heart_scale "+appFolderPath+"model");
+        // 2. assign model/output paths
+        String dataTrainPath = appFolderPath+"heart_scale ";
+        String dataPredictPath = appFolderPath+"heart_scale ";
+        String modelPath = appFolderPath+"model ";
+        String outputPath = appFolderPath+"predict ";
 
-        // 3. make SVM predict
-        jniSvmPredict(appFolderPath+"heart_scale "+appFolderPath+"model "+appFolderPath+"predict");
+        // 3. make SVM train
+        String svmTrainOptions = "-t 2 ";
+        jniSvmTrain(svmTrainOptions+dataTrainPath+modelPath);
 
-        // 4. update SVM results to UI
+        // 4. make SVM predict
+        jniSvmPredict(dataPredictPath+modelPath+outputPath);
 
     }
 
