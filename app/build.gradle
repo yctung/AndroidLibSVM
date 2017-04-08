@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+import org.apache.tools.ant.taskdefs.condition.Os
 
 android {
     compileSdkVersion 20
@@ -28,16 +29,27 @@ android {
 
     task buildNative(type: Exec, description: 'Compile JNI source via NDK') {
         def ndkDir = android.ndkDirectory
-        commandLine "$ndkDir/ndk-build",
+        if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+            ndkDir = "$ndkDir/ndk-build.cmd"
+        }else {
+            ndkDir = "$ndkDir/ndk-build"
+        }
+        commandLine "$ndkDir",
                 '-C', file('src/main/jni').absolutePath, // Change src/main/jni the relative path to your jni source
                 '-j', Runtime.runtime.availableProcessors(),
                 'all',
                 'NDK_DEBUG=1'
-    }
 
+
+    }
     task cleanNative(type: Exec, description: 'Clean JNI object files') {
         def ndkDir = android.ndkDirectory
-        commandLine "$ndkDir/ndk-build",
+        if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+            ndkDir = "$ndkDir/ndk-build.cmd"
+        }else {
+            ndkDir = "$ndkDir/ndk-build"
+        }
+        commandLine "$ndkDir",
                 '-C', file('src/main/jni').absolutePath, // Change src/main/jni the relative path to your jni source
                 'clean'
     }
