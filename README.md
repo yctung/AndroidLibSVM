@@ -27,17 +27,17 @@ An example usage in Java could be:
 	jniSvmPredict("your_predict_data_path your_model_file_path your_output_file_path");
 ```
 
-The svm-scale is also supported in this porting. Please note that I changed the input interface becasue the original libsvm relies on linux redirecting (e.g., svm-scale input > out)
-An example of using svm-scale is:
+The svm-scale is also supported. Please note that I changed the input interface becasue the original svm-scale relies on linux redirecting (e.g., svm-scale input > out)
+An example could be:
 ```sh
-	jniSvmScale("(some other options) your_input_data_path", "your_output_file_path");
+	jniSvmScale("-l -1 -u 1 your_input_data_path", "your_output_file_path");
 ```
 
 By reading and analyze the output file, most applications can easily enjoy the powerful libsvm functionaility with this project.
 
 ## Troubleshooting
 Your Android Studio might complain something about "(null)/ndk-build". This is because the compiler doesn't get the path of your local ndk path
-- Solution: add ndk path to your local.properties file like this: "ndk.dir=/Users/eddyxd/Library/Android/ndk"
+- Solution: add ndk path to your local.properties file like this: "ndk.dir=/Users/MyName/Android/ndk"
 
 ## Include this project to existing Android project
 To use this project in your existing Android project, you need to do the following actions:
