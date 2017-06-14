@@ -26,6 +26,7 @@ public class MainActivity extends Activity {
     // connect the native functions
     private native void jniSvmTrain(String cmd);
     private native void jniSvmPredict(String cmd);
+    private native void jniSvmScale(String cmd, String fileOutPath);
 
 
     @Override
@@ -41,17 +42,23 @@ public class MainActivity extends Activity {
 
         // 2. assign model/output paths
         String dataTrainPath = appFolderPath+"heart_scale ";
+        String dataScaledPath = appFolderPath+"scaled";
         String dataPredictPath = appFolderPath+"heart_scale ";
         String modelPath = appFolderPath+"model ";
         String outputPath = appFolderPath+"predict ";
 
-        // 3. make SVM train
+        // 3. (optional) make SVM scale
+        // NOTE: the jni interface is different from the original svm-scale because the it requires
+        //       to redirect the output by Linux Redirecting, e.g., svm-scale input > out
+        //       in this case, the jni interface changed to: jniSvmScale(input, output)
+        jniSvmScale(dataTrainPath, dataScaledPath);
+
+        // 4. make SVM train
         String svmTrainOptions = "-t 2 ";
         jniSvmTrain(svmTrainOptions+dataTrainPath+modelPath);
 
-        // 4. make SVM predict
+        // 5. make SVM predict
         jniSvmPredict(dataPredictPath+modelPath+outputPath);
-
     }
 
 

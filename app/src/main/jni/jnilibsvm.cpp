@@ -11,8 +11,43 @@
 #include <vector>
 #include "./libsvm/svm-train.h"
 #include "./libsvm/svm-predict.h"
+#include "./libsvm/svm-scale.h"
 #include "common.h"
 
+// helper function to be called in Java for making svm-scale
+extern "C" void Java_edu_umich_eecs_androidlibsvm_MainActivity_jniSvmScale(JNIEnv *env, jobject obj, jstring cmdIn, jstring fileOutPathIn){
+	const char *cmd = env->GetStringUTFChars(cmdIn, 0);
+	const char *fileOutPath = env->GetStringUTFChars(fileOutPathIn, 0);
+	debug("jniSvmScale cmd = %s, fileOutPath = %s", cmd, fileOutPath);
+
+	std::vector<char*> v;
+
+	// add dummy head to meet argv/command format
+	std::string cmdString = std::string("dummy ")+std::string(cmd);
+
+	cmdToArgv(cmdString, v);
+
+	// hack to redirect the std output of svm-scale to a file
+	// credit: https://stackoverflow.com/questions/10150468/how-to-redirect-cin-and-cout-to-files
+	freopen(fileOutPath,"w", stdout);
+
+	// make svm train by libsvm
+	svmscale::main(v.size(),&v[0]);
+
+	// close the redirect file(stdout)
+	// TODO: should we get the stdout back? seems not necessary in this case
+	fclose (stdout);
+
+
+	// free vector memory
+	for(int i=0;i<v.size();i++){
+		free(v[i]);
+	}
+
+	// free java object memory
+	env->ReleaseStringUTFChars(cmdIn, cmd);
+	env->ReleaseStringUTFChars(fileOutPathIn, fileOutPath);
+}
 
 
 // helper function to be called in Java for making svm-train

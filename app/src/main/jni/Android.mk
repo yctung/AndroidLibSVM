@@ -13,6 +13,7 @@ LOCAL_SRC_FILES := \
 	common.cpp jnilibsvm.cpp \
 	libsvm/svm-train.cpp \
 	libsvm/svm-predict.cpp \
+	libsvm/svm-scale.cpp \
 	libsvm/svm.cpp
 
 LOCAL_LDLIBS	+= -llog -ldl
