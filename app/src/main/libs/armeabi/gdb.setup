@@ -1,2 +1,0 @@
-set solib-search-path /Users/eddyxd/Downloads/AndroidLibSvm/app/src/main/obj/local/armeabi
-directory /Users/eddyxd/Library/Android/ndk/platforms/android-9/arch-arm/usr/include /Users/eddyxd/Library/Android/ndk/sources/cxx-stl/gnu-libstdc++ /Users/eddyxd/Library/Android/ndk/sources/cxx-stl/gnu-libstdc++/4.9/include /Users/eddyxd/Library/Android/ndk/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi/include /Users/eddyxd/Library/Android/ndk/sources/cxx-stl/gnu-libstdc++/4.9/include/backward /Users/eddyxd/Downloads/AndroidLibSvm/app/src/main/jni
