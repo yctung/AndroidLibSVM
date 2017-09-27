@@ -2,8 +2,8 @@
 An open-source Android AAR library of the famous LibSVM [https://www.csie.ntu.edu.tw/~cjlin/libsvm/]
 
 ## Update
-2017/09/26: Build to AAR, so users don't need to worry about JNI/NDK
-2017/09/27: Thank Isaac Freeman for sharing his app using AndroidLibSVM
+- 2017/09/26: Build to AAR, so users don't need to worry about JNI/NDK
+- 2017/09/27: Thank Isaac Freeman for sharing his app using AndroidLibSVM
 ![Example Demo App](/Example/screenshots/demo_all.png?raw=true "Example Demo App")
 
 ## Getting Started
@@ -79,6 +79,9 @@ You need Android NDK to build AndroidLibSVM. I am using the NDK-r15b and the cus
 Your Android Studio might complain something about "(null)/ndk-build". This is because the compiler doesn't get the path of your local NDK path
 - Solution: add NDK path to your local.properties file like this:
 ``` ndk.dir=/Users/MyPath/Android/ndk```
+
+### Author
+This project is currently maintained by [Yu-Chih Tung](https://yctung.github.io/)
 
 ## Example Demo App (with a beautiful GUI)
 Thanks Isaac Freeman for building such a useful [demo app](/Example). Following shows some GUI of this demo app. User can easily train/scale/predict their model with LibSVM through this GUI.
