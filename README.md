@@ -24,7 +24,7 @@ After this, you should add the app dependency by:
 Right-click your app module -> open module setting -> clieck your app -> dependencies -> + -> module dependency -> androidlibsvm
 ```
 
-Once you finish these two steps, you should be able to import our LibSVM class in your java code by:
+Once you finish these two steps, you should be able to import our LibSVM class in your JAVA code by:
 
 ```
 import umich.cse.yctung.androidlibsvm.LibSVM;
@@ -33,7 +33,7 @@ import umich.cse.yctung.androidlibsvm.LibSVM;
 If you get any AAR import issues, please refer this [Android official guide](https://developer.android.com/studio/projects/android-library.html).
 
 ### Usage
-You can initalize our LibSVM class either by
+You can initialize our LibSVM class either by
 
 ```
 LibSVM svm = new LibSVM();
@@ -46,7 +46,7 @@ LibSVM svm = LibSVM().getInstance();
 ```
 
 Our implementation uses **files** as an input/output interface (just like how the original LibSVM works on the shell). So if you are familiar with the original LibSVM, it should be trivial to use our implementation.
-In the following example, you can assume you have LibSVM's **heart\_scale** and **heart\_scale\_predict** dataset in your Android storage. Please check our [testing app](AndroidLibSVM/app/src/main/java/edu/umich/eecs/androidlibsvm/) for further reference.
+In the following example, you can assume you have LibSVM's **heart\_scale** and **heart\_scale\_predict** datasets in your Android storage. Please check our [testing app](AndroidLibSVM/app/src/main/java/edu/umich/eecs/androidlibsvm/) for further reference.
 
 ### Train/Scale/Predict
 You can train/scale/predict just by the following three member functions declared in the LibSVM class:
@@ -84,11 +84,13 @@ Your Android Studio might complain something about "(null)/ndk-build". This is b
 This project is currently maintained by [Yu-Chih Tung](https://yctung.github.io/)
 
 ## Example Demo App (with a beautiful GUI)
-Thanks Isaac Freeman for building such a useful [demo app](/Example). Following shows some GUI of this demo app. User can easily train/scale/predict their model with LibSVM through this GUI.
+Thank Isaac Freeman for building such a useful [demo app](/Example). Following shows some GUI of this demo app. Users can easily train/scale/predict their model with LibSVM through this GUI.
 ![Example Demo App](/Example/screenshots/demo_all.png?raw=true "Example Demo App")
 
 ### Credit
 Isaac Freeman
 
-### Troubleshooting
-If LibSVM can't read/write the expected output, check if your app has the permission of ```READ_EXTERNAL_STORAGE``` and ```WRITE_EXTERNAL_STORAGE```
+## Troubleshooting
+- If LibSVM can't read/write the expected output, check if your app has the permission of ```READ_EXTERNAL_STORAGE``` and ```WRITE_EXTERNAL_STORAGE```
+- If LibSVM crashes, ensure your input options follow the original LibSVM format
+- We don't support input as an array (or other data types) now. Please save your dataset to train/predict as files and ensure they are accessible in the Android.
