@@ -1,5 +1,5 @@
 # AndroidLibSvm
-An open-source Android AAR library of the famous LibSVM [https://www.csie.ntu.edu.tw/~cjlin/libsvm/]
+An open-source Android AAR library of the famous [LibSVM](https://www.csie.ntu.edu.tw/~cjlin/libsvm/)
 
 ## Update
 - 2017/09/26: Build to AAR, so users don't need to worry about JNI/NDK
