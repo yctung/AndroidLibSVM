@@ -3,7 +3,7 @@ An open-source Android AAR library of the famous [LibSVM](https://www.csie.ntu.e
 
 ## Update
 - 2017/09/26: Build to AAR, so users don't need to worry about JNI/NDK
-- 2017/09/27: Thank Isaac Freeman for sharing his app using AndroidLibSVM
+- 2017/09/27: Thank [Isaac Salem](https://github.com/iamAyezak) for sharing his app using AndroidLibSVM
 ![Example Demo App](/Example/screenshots/demo_all.png?raw=true "Example Demo App")
 
 ## Getting Started
@@ -85,11 +85,11 @@ Your Android Studio might complain something about "(null)/ndk-build". This is b
 - The core LibSVM is developed by [Chih-Jen Lin](https://www.csie.ntu.edu.tw/~cjlin/index.html) and his team
 
 ## Example Demo App (with a beautiful GUI)
-Thank Isaac Freeman for building such a useful [demo app](/Example). Following shows some GUI of this demo app. Users can easily train/scale/predict their model with LibSVM through this GUI.
+Thank Isaac Salem for building such a useful [demo app](/Example). Following shows some GUI of this demo app. Users can easily train/scale/predict their model with LibSVM through this GUI.
 ![Example Demo App](/Example/screenshots/demo_all.png?raw=true "Example Demo App")
 
 ### Credit
-Isaac Freeman
+[Isaac Salem](https://github.com/iamAyezak)
 
 ## Troubleshooting
 - If LibSVM can't read/write the expected output, check if your app has the permission of ```READ_EXTERNAL_STORAGE``` and ```WRITE_EXTERNAL_STORAGE```
