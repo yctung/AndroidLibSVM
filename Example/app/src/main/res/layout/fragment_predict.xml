@@ -1,0 +1,103 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.test.libsvmandroidexample.PredictFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Test File"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/testfilepicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick Test File" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="@color/secondary_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Model File"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/modelfilepicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick Model File" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="@color/secondary_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Output File"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/output_filename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:hint="Enter output file name"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:textColor="@color/primary_text"
+            android:textColorHint="@color/secondary_text" />
+
+        <CheckBox
+            android:id="@+id/probabilitycheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-b (probability_estimates)"
+            android:textColor="@color/accent" />
+
+        <EditText
+            android:id="@+id/probabilityinput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:enabled="false"
+            android:hint="Enter value 0 or 1 (default 0)"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:textColor="@color/primary_text"
+            android:textColorHint="@color/secondary_text" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/predict_btn"
+            android:text="Run svm-predict"
+            android:background="@color/accent"
+            android:textColor="@android:color/white"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

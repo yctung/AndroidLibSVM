@@ -1,0 +1,84 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.test.libsvmandroidexample.TrainFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Data File"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/datafilepicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick Data File" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="@color/secondary_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Output Model File"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/output_filename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:hint="Enter output model file name"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:textColor="@color/primary_text"
+            android:textColorHint="@color/secondary_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Train Options"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/train_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:hint="Enter train options"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:textColor="@color/primary_text"
+            android:textColorHint="@color/secondary_text" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/train_btn"
+            android:text="Run svm-train"
+            android:background="@color/accent"
+            android:textColor="@android:color/white"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+
+</ScrollView>

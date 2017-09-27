@@ -1,0 +1,228 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:isScrollContainer="false"
+    tools:context="com.test.libsvmandroidexample.ScaleFragment">
+
+    <LinearLayout
+        android:id="@+id/input_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Data File"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/datafilepicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick Data File" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="@color/secondary_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Output File"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/output_filename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:hint="Enter output file name"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:textColor="@color/primary_text"
+            android:textColorHint="@color/secondary_text" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="@color/secondary_text" />
+
+        <CheckBox
+            android:id="@+id/savecheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-s (save_filename)"
+            android:textColor="@color/accent" />
+
+        <EditText
+            android:id="@+id/save_filename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:enabled="false"
+            android:hint="Enter save file name"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:textColor="@color/primary_text"
+            android:textColorHint="@color/secondary_text" />
+
+        <CheckBox
+            android:id="@+id/restorecheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-r (restore_filename)"
+            android:textColor="@color/accent" />
+
+        <Button
+            android:id="@+id/restorefilepicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Pick Restore File" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="@color/secondary_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="X Scaling"
+            android:textColor="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/lowerlimitcheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-l (lower limit)"
+                    android:textColor="@color/accent" />
+
+                <EditText
+                    android:id="@+id/lowerlimit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:enabled="false"
+                    android:hint="Enter lower limit"
+                    android:inputType="numberDecimal"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="@color/secondary_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/upperlimitcheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-u (upper limit)"
+                    android:textColor="@color/accent" />
+
+                <EditText
+                    android:id="@+id/upperlimit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:enabled="false"
+                    android:hint="Enter upper limit"
+                    android:inputType="numberDecimal"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="@color/secondary_text" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Y Scaling"
+            android:textColor="@android:color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <CheckBox
+                    android:id="@+id/ylimitcheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-y (y_lower y_upper)"
+                    android:textColor="@color/accent" />
+
+                <EditText
+                    android:id="@+id/ylimit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:enabled="false"
+                    android:hint="Enter lower or upper limit or both"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="@color/secondary_text" />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scale_btn"
+                android:text="Run svm-scale"
+                android:background="@color/accent"
+                android:textColor="@android:color/white"
+                android:layout_margin="5dp"/>
+
+        </LinearLayout>
+
+</ScrollView>

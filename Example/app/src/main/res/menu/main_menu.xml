@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/menu_train_options"
+        android:title="Train Options"
+        app:showAsAction="never"/>
+    <item android:id="@+id/menu_scale_options"
+        android:title="Scale Options"
+        app:showAsAction="never"/>
+    <item android:id="@+id/menu_predict_options"
+        android:title="Predict Options"
+        app:showAsAction="never"/>
+    <item android:id="@+id/menu_copyright_btn"
+        android:title="Copyright"
+        app:showAsAction="never"/>
+</menu>

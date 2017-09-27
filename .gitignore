@@ -1,4 +1,10 @@
 **/local.properties
+**/*.iml
 **/.gradle/
 **/.idea/
 **/.DS_Store
+AndroidLibSVM/build
+Example/build
+**/main/obj
+**/main/libs
+**/.externalNativeBuild
