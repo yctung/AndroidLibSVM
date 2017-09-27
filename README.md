@@ -81,7 +81,8 @@ Your Android Studio might complain something about "(null)/ndk-build". This is b
 ``` ndk.dir=/Users/MyPath/Android/ndk```
 
 ### Author
-This project is currently maintained by [Yu-Chih Tung](https://yctung.github.io/)
+This Android library is currently maintained by [Yu-Chih Tung](https://yctung.github.io/)
+The core LibSVM is developed by [Chih-Jen Lin](https://www.csie.ntu.edu.tw/~cjlin/index.html) and his team
 
 ## Example Demo App (with a beautiful GUI)
 Thank Isaac Freeman for building such a useful [demo app](/Example). Following shows some GUI of this demo app. Users can easily train/scale/predict their model with LibSVM through this GUI.
