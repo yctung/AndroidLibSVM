@@ -55,7 +55,7 @@ You can train/scale/predict just by the following three member functions declare
 public class LibSVM {
     public void train(String options); // equivalent to "bash svm-train options"
     public void predict(String options); // equivalent to "bash svm-predict options"
-    public void scale(options, fileOutPath); // equivalent to "bash svm-scale options > fileOutPath"
+    public void scale(String options, String fileOutPath); // equivalent to "bash svm-scale options > fileOutPath"
 }
 ```
 
