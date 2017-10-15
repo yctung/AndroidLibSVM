@@ -85,7 +85,8 @@ Your Android Studio might complain something about "(null)/ndk-build". This is b
 - The core LibSVM is developed by [Chih-Jen Lin](https://www.csie.ntu.edu.tw/~cjlin/index.html) and his team
 
 ### Copyright
-- Feel free to use this wrapper at whatever manner you want :), but remember to include the LibSVM's [copyright](COPYWRITE) file in your project!
+- Feel free to use this wrapper at whatever manner you want :)
+- But remember to include the LibSVM's [copyright](COPYWRITE.txt) file in your project
 
 ## Example Demo App (with a beautiful GUI)
 Thank Isaac Salem for building such a useful [demo app](/Example). Following shows some GUI of this demo app. Users can easily train/scale/predict their model with LibSVM through this GUI.
