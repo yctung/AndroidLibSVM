@@ -86,7 +86,7 @@ Your Android Studio might complain something about "(null)/ndk-build". This is b
 
 ### Copyright
 - Feel free to use this wrapper at whatever manner you want :)
-- But remember to include the LibSVM's [copyright](COPYWRITE.txt) file in your project
+- But remember to include the LibSVM's [copyright](COPYRIGHT.txt) file in your project
 
 ## Example Demo App (with a beautiful GUI)
 Thank Isaac Salem for building such a useful [demo app](/Example). Following shows some GUI of this demo app. Users can easily train/scale/predict their model with LibSVM through this GUI.
