@@ -30,7 +30,7 @@ Once you finish these two steps, you should be able to import our LibSVM class i
 import umich.cse.yctung.androidlibsvm.LibSVM;
 ```
 
-If you get any AAR import issues, please refer this [Android official guide](https://developer.android.com/studio/projects/android-library.html).
+If you get any AAR import issue, please read this [Android official AAR guide](https://developer.android.com/studio/projects/android-library.html).
 
 ### Usage
 You can initialize our LibSVM class either by
