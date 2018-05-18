@@ -13,11 +13,23 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        ndk {
-            moduleName "jnilibsvm" // <-- This is the name of my C++ module!
-            ldLibs "log"
-            stl "stlport_shared"
-            cFlags "-DDEV_NDK=1"
+        externalNativeBuild {
+            cmake {
+                arguments '-DANDROID_PLATFORM=android-15',
+                        '-DANDROID_TOOLCHAIN=clang',
+                        '-DANDROID_STL=stlport_shared',
+                        '-DCMAKE_BUILD_TYPE=Release ..'
+                cppFlags "-std=c++11","-frtti", "-fexceptions","-O3"
+            }
+        }
+        ndk{
+            abiFilters 'armeabi-v7a','arm64-v8a'
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
         }
     }
 
